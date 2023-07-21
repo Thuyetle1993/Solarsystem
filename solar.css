@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: url(./asset/Img/galaxy.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.solar {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.sun-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sun {
+    background-image: url(./asset/Img/sun.png);
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    animation: round 60s linear infinite;
+    z-index: 9999;
+}
+.sun-shadow {
+    transform: translate(-50%, -50%);
+    background-color: #d3e206;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    position: fixed;
+    border: solid 1px transparent;
+    border-radius: 999px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 25px 70px rgba(161, 165, 89, 0.3);
+}
+.earth-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.earth {
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    animation: round 36.5s linear infinite;
+}
+.earth:before {
+    width: 3em;
+    height: 3em;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 3em;
+    right: 2.7em;
+    background-image: url(./asset/Img/earth.png);
+    background-size: cover;
+    animation: round1 3s linear infinite;
+}
+
+.moon {
+    width: 7em;
+    height: 7em;
+    right: 0.8em;
+    top: 1.4em;
+    position: absolute;
+    animation: round 8s linear infinite;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+}
+.moon:after {
+    position: absolute;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(./asset/Img/moon.png);
+    background-size: cover;
+    top: 0.4em;
+    right: 0;
+    animation: round1 3s linear infinite;
+}
+.jupiter-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.jupiter {
+    position: relative;
+    width: 60em;
+    height: 60em;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    animation: round 70s linear infinite;
+}
+.jupiter:before {
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    content: "";
+    border-radius: 50%;
+    top: 6em;
+    right: 5em;
+    background-image: url(./asset/Img/jupiter.png);
+    background-size: cover;
+    animation: round1 8s linear infinite;
+}
+.saturn-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.saturn {
+    position: relative;
+    width: 80em;
+    height: 80em;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.08em 0 0 0;
+    animation: round 85s linear infinite;
+}
+.saturn:after {
+    width: 12em;
+    height: 6em;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 9.5em;
+    right: 5em;
+    background-image: url(./asset/Img/Saturn.png);
+    background-size: cover;
+    /* animation: round1 8s linear infinite; */
+}
+
+@keyframes round {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes round1 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
